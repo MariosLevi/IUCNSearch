@@ -10,12 +10,19 @@ Install the required libraries: pip install requests beautifulsoup4
 
 # Usage
 Go to the IUCN website and apply the filters you want to use to find wanted fungi.
+
 Copy the page source of the resulting page.
+
 Save the page source to a file on your computer (e.g. "vulnerable1.html")
+
 Open the command prompt or terminal and navigate to the directory containing the script.
+
 Run the script: python listmaker.py
-Copy and paste the generate list of mycobank ID's into the urls variable on IUCNAnalyzer
+
+Copy and paste the generate list of mycobank fungi ID's into the urls variable on IUCNAnalyzer
+
 Run the script: python IUCNAnalyzer.py
+
 Wait for the script to finish running. The results will be saved to a file named 'results.csv' in the same directory as the script.
 
 # Contributing
