@@ -1,0 +1,1765 @@
+<body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-59456265-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container-fluid navbar-logo">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="/iucn/"><small><small>The Global</small></small> <br><span class="red">Fungal Red List</span>&nbsp;<small><small>Initiative</small></small>&nbsp;&nbsp;</a>
+    
+              <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="icon-key"></i> <span class="caret"></span>
+                </a>
+    
+        <ul class="dropdown-menu">
+            <li><a href="http://iucn.ekoo.se/en/auth/login"><i class="icon-signin"></i> Sign In</a></li>    
+            <li><a href="http://iucn.ekoo.se/en/auth/register"><i class="icon-edit"></i> Sign Up</a></li>
+            <li><a href="http://iucn.ekoo.se/en/auth/forgot_password"><i class="icon-question"></i> Forgot password</a></li>
+        </ul>
+              </div>
+              
+              <div class="nav-collapse">
+                <ul class="nav">
+                  <li><a href="/iucn/species_list/event/18/">Events and <span class="br"></span>Workshops</a></li>
+                  <li><a href="/iucn/species_list/">Species <span class="br"></span>Search</a></li>
+                  <li><a href="/iucn/selectspecies/">Add New <span class="br"></span>Proposal</a></li>
+                  <li><a href="/iucn/summary/">Summary <span class="br"></span>and Statistics</a></li>      
+                  <li><a href="/iucn/about/">About <span class="br"></span>The Initiative</a></li>
+                  <li style="font-weight:bold;"><a href="/iucn/plans/" style="color:#FF5C00;">Activities <span class="br"></span>2017–2020</a></li>  
+                </ul>
+    
+              
+    </div><!--/.nav-collapse -->
+    
+            </div>
+          </div>
+        </div>
+    <!--
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>The Global Fungal Red List Website</strong> is going to be down for maintenance from thursday 31 May and at least 24-48 hours forward.
+    </div>--><!-- START ROW -->	  
+    <div class="row">
+    
+        <!-- START COL -->	  
+        <div class="span12">
+            <!-- START BOX -->
+    
+            <!-- START BOX -->
+            <div class="bg-box">
+    
+                <!-- HEADER FILTERS -->
+                <div class="row-fluid">
+    
+                    <form id="checklist-filter-event">
+                    
+                     
+                        <div class="span12">
+                                <span class="species-auct">Search for species by name...</span>
+                                <p><div class="select2-container bigdrop" id="s2id_select_species" style="width: 100%">    <a href="javascript:void(0)" onclick="return false;" class="select2-choice">   <span></span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen bigdrop">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input type="hidden" class="bigdrop select2-offscreen" id="select_species" style="width:100%" value="801321" tabindex="-1"></p>
+                            <span class="species-auct">...or search by filter:</span>
+                        </div><!-- COL -->
+                                        
+                      
+                    <div class="span3" style="margin:0;">
+                                      <h5 class="font-weight-bold">Assessment status</h5>
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ass_pu" name="check-ass" data-label="Published" class="checkbox-filter"> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Published&nbsp;<span class="muted" data-traitcounter="ass_pu">(157)</span>
+                           </label>
+                        </div>
+                        
+                       <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ass_as" name="check-ass" data-label="Assessed" class="checkbox-filter"> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Assessed&nbsp;<span class="muted" data-traitcounter="ass_as">(39)</span>
+                           </label>
+                        </div>                    
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ass_pa" name="check-ass" data-label="Preliminary Assessed" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Preliminary Assessed&nbsp;<span class="muted" data-traitcounter="ass_pa">(28)</span>
+                           </label>
+                        </div>
+                        
+                        <!-- Default checkbox -->
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ass_ua" name="check-ass" data-label="Under Assessment" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Under Assessment&nbsp;<span class="muted" data-traitcounter="ass_ua">(6)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ass_pr" name="check-ass" data-label="Proposed" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Proposed&nbsp;<span class="muted" data-traitcounter="ass_pr">(1)</span>
+                           </label>
+                        </div>
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ass_do" name="check-ass" data-label="Dormant" class="checkbox-filter"> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Dormant&nbsp;<span class="muted" data-traitcounter="ass_do">(1)</span>
+                           </label>
+                        </div>                    
+    <!-- Disabled checkbox -->
+    <!--
+                        <div class="checkbox">
+      <label>
+       <input type="checkbox" value="" disabled>
+       <span class="cr"><i class="cr-icon icon-ok"></i></span>
+       Option three is disabled
+       </label>
+    </div>                     -->
+                        
+     
+    
+                    </div> 
+                    
+                   <div class="span3">
+                    <h5 class="font-weight-bold">Red List Category</h5>
+                        
+                        <!-- Default checkbox -->
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_EX" name="check-rl" data-label="Extinct (EX)" class="checkbox-filter" disabled="">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Extinct (EX)&nbsp;<span class="muted" data-traitcounter="rl_EX">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_EW" name="check-rl" data-label="Extinct In The Wild (EW)" class="checkbox-filter" disabled="">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Extinct In The Wild (EW)&nbsp;<span class="muted" data-traitcounter="rl_EW">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_CR" name="check-rl" data-label="Critically Endangered (CR)" class="checkbox-filter" disabled="">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Critically Endangered (CR)&nbsp;<span class="muted" data-traitcounter="rl_CR">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_EN" name="check-rl" data-label="Endangered (EN)" class="checkbox-filter" disabled=""> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Endangered (EN)&nbsp;<span class="muted" data-traitcounter="rl_EN">(0)</span>
+                           </label>
+                        </div>
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="rl_VU" name="check-rl" data-label="Vulnerable (VU)" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Vulnerable (VU)&nbsp;<span class="muted" data-traitcounter="rl_VU">(232)</span>
+                           </label>
+                        </div>          
+                        
+                    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_NT" name="check-rl" data-label="Near Threatened (NT)" class="checkbox-filter" disabled="">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Near Threatened (NT)&nbsp;<span class="muted" data-traitcounter="rl_NT">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_DD" name="check-rl" data-label="Data Deficient (DD)" class="checkbox-filter" disabled="">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Data Deficient (DD)&nbsp;<span class="muted" data-traitcounter="rl_DD">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_LC" name="check-rl" data-label="Least Concern (LC)" class="checkbox-filter" disabled=""> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Least Concern (LC)&nbsp;<span class="muted" data-traitcounter="rl_LC">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_NE" name="check-rl" data-label="Not Evaluated (NE)" class="checkbox-filter" disabled="">   
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Not Evaluated (NE)&nbsp;<span class="muted" data-traitcounter="rl_NE">(0)</span>
+                           </label>
+                        </div>
+                        
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="rl_NA" name="check-rl" data-label="Not Applicable (NA)" class="checkbox-filter" disabled="">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Not Applicable (NA)&nbsp;<span class="muted" data-traitcounter="rl_NA">(0)</span>
+                           </label>
+                        </div>                        
+                
+                    </div>      
+                    
+                    <div class="span3">
+                    <h5 class="font-weight-bold">Fungal Group</h5>
+                        
+                        <!-- Default checkbox -->
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="gr_1" name="check-gr" data-label="Chytrids, Zygomycetes, Downy Mildews and Slime Moulds" class="checkbox-filter" disabled="">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Chytrids, Zygomycetes, Downy Mildews and Slime Moulds&nbsp;<span class="muted" data-traitcounter="gr_1">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="gr_2" name="check-gr" data-label="Cup-fungi, Truffles and Allies" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Cup-fungi, Truffles and Allies&nbsp;<span class="muted" data-traitcounter="gr_2">(12)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="gr_3" name="check-gr" data-label="Lichens" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Lichens&nbsp;<span class="muted" data-traitcounter="gr_3">(22)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="gr_4" name="check-gr" data-label="Mushrooms, Brackets and Puffballs" class="checkbox-filter"> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Mushrooms, Brackets and Puffballs&nbsp;<span class="muted" data-traitcounter="gr_4">(194)</span>
+                           </label>
+                        </div>
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="gr_5" name="check-gr" data-label="Rusts and Smuts" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Rusts and Smuts&nbsp;<span class="muted" data-traitcounter="gr_5">(4)</span>
+                           </label>
+                        </div>          
+    
+                        
+                    </div>                 
+                    
+                    <div class="span3">
+                    <h5 class="font-weight-bold">Known Distribution</h5>
+    
+                        
+                        <!-- Default checkbox -->
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ct_AF" name="check-ct" data-label="Africa" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Africa&nbsp;<span class="muted" data-traitcounter="ct_AF">(14)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="muted">
+                           <input type="checkbox" id="ct_AN" name="check-ct" data-label="Antarctica" class="checkbox-filter" disabled=""> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Antarctica&nbsp;<span class="muted" data-traitcounter="ct_AN">(0)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ct_AS" name="check-ct" data-label="Asia" class="checkbox-filter"> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Asia&nbsp;<span class="muted" data-traitcounter="ct_AS">(39)</span>
+                           </label>
+                        </div>
+    
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ct_EU" name="check-ct" data-label="Europe" class="checkbox-filter "> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Europe&nbsp;<span class="muted" data-traitcounter="ct_EU">(97)</span>
+                           </label>
+                        </div>
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ct_NA" name="check-ct" data-label="North America" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           North America&nbsp;<span class="muted" data-traitcounter="ct_NA">(75)</span>
+                           </label>
+                        </div>     
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ct_OC" name="check-ct" data-label="Oceania" class="checkbox-filter"> 
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           Oceania&nbsp;<span class="muted" data-traitcounter="ct_OC">(18)</span>
+                           </label>
+                        </div>
+                        
+                        <div class="checkbox">
+                          <label class="">
+                           <input type="checkbox" id="ct_SA" name="check-ct" data-label="South America" class="checkbox-filter">
+                           <span class="cr"><i class="cr-icon icon-ok"></i></span>
+                           South America&nbsp;<span class="muted" data-traitcounter="ct_SA">(60)</span>
+                           </label>
+                        </div>                       
+    
+                </div>                  
+                        
+    </form>                    
+    
+    </div>
+            </div>
+            <!-- START BOX -->
+            <div class="bg-box" style="overflow: visible;" id="scrolltop">
+                
+                <!-- HEADER FILTERS -->
+                <div class="row-fluid">
+                    <div class="span12 filter-header">
+                        <div class="muted filter-label show">Applied Filters:</div>
+                        <div class="muted pull-right">Results: <span id="thumbs_count">232</span> species – page <span id="currentpage">6</span> of <span id="totalpages">6</span></div>                    
+                        <a href="javascript:void(0);" class="remove-filter" data-checkboxparent="rl_VU" data-typ="box"><span class="label filterlabel text-wrap">Vulnerable (VU)&nbsp;<i class="icon-remove"></i></span></a><a href="javascript:void(0);" class="reset-filter pull-left show"><span class="label filterlabel text-wrap" style="color:#3a87ad;background-color:#fff;-webkit-text-shadow:none;text-shadow:none;">Remove all filters&nbsp;<i class="icon-remove"></i></span></a>
+                    </div>
+                    <div class="span12">
+                        <div class="spinner-border hide" role="status">
+                            <img style="float: left; margin:0;" src="/assets/img/loading_icon.gif" width="20px;">&nbsp;
+                            <span class="visually-hidden">Searching... Please wait while loading...</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- TAXA LIST -->            
+                <div class="row-fluid">
+                    <div class="span12">
+                        <ul class="thumbnails" id="thumbs_grid">    <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/305493">
+                    <div class="ratio" style="background-image:url('/assets/uploads/f2267-IMGP2099a.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A2c+3c+4c&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Sarcodontia crocea Photo: Reda Iršėnaitė&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Sarcodontia crocea <span class="species-auct"><small>(Schwein.) Kotl.</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/305493" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/466458">
+                    <div class="ratio" style="background-image:url('/assets/uploads/ab6ca-Skeletocutis-nothofagi.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-preliminary-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">D!&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Skeletocutis nothofagi, basidiome. Mario Rajchenberg&nbsp;</small></p>
+            
+                <span class="label label-preliminary-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Preliminary Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Skeletocutis nothofagi <span class="species-auct"><small>Rajchenb.</small></span></h4>
+              <p></p><p class="text-error"><i class="icon-warning-sign"></i> Possibly DD...</p><p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/466458" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/134031">
+                    <div class="ratio" style="background-image:url('/assets/img/image_missing.png')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Skeletocutis roseola <span class="species-auct"><small>(Rick ex Theiss.) Rajchenb.</small></span></h4>
+              <p>Skeletocutis roseola is a rare wood-decay polypore. It occurs in the Atlantic Forest domain of ...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/134031" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/134054">
+                    <div class="ratio" style="background-image:url('/assets/uploads/f16b2-squamanitasquarrulosa.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-preliminary-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">D1&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Squamanita squarrulosa - G. Monk&nbsp;</small></p>
+            
+                <span class="label label-preliminary-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Preliminary Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Squamanita squarrulosa <span class="species-auct"><small>G.S. Ridl.</small></span></h4>
+              <p>Squamanita squarrulosa is a distinctive and uncommon species endemic to the North Island of New...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/134054" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/339684">
+                    <div class="ratio" style="background-image:url('/assets/uploads/295ec-IMGP9119a.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A2c+3c+4c&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Stereopsi vitellina, Čepkeliai Nature Reserve, Lithuania, photo: Reda Iršėnaitė&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Stereopsis vitellina <span class="species-auct"><small>(S. Lundell) D.A. Reid</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/339684" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/489466">
+                    <div class="ratio" style="background-image:url('/assets/uploads/9a20b-Sticta_carolinensis_ET3960-JL.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">B2ab(i,ii,iii,v)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Sticta carolinensis (photo: J.C. Lendemer)&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Sticta carolinensis <span class="species-auct"><small>T. McDonald</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/489466" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/510885">
+                    <div class="ratio" style="background-image:url('/assets/uploads/58818-Stropharia-acanthocystis----Seger-C.-1-.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Stropharia acanthocystis © Seger C.&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Stropharia acanthocystis <span class="species-auct"><small>Cortez &amp; R.M. Silveira</small></span></h4>
+              <p>Stropharia acanthocystis is a mushroom species from the Araucaria Moist Forests of Southern Bra...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/510885" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/511916">
+                    <div class="ratio" style="background-image:url('/assets/uploads/0ebfb-Stropharia-agaricoides----Silva-P.S.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Stropharia agaricoides © Silva P.S.&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Stropharia agaricoides <span class="species-auct"><small>P.S. Silva, Cortez &amp; R.M. Silveira</small></span></h4>
+              <p>Stropharia agaricoides is a mushroom species from the Araucaria Moist Forests of Southern Brazi...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/511916" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/510884">
+                    <div class="ratio" style="background-image:url('/assets/img/image_missing.png')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Stropharia araucariae <span class="species-auct"><small>Cortez &amp; R.M. Silveira</small></span></h4>
+              <p>Stropharia araucariae is a mushroom species from the Araucaria Moist Forests of Southern Brazil...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/510884" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/1000310">
+                    <div class="ratio" style="background-image:url('/assets/uploads/8f4b5-Stropharia-coelhoi----Seger-C.-1.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Stropharia coelhoi © Seger C.&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Stropharia coelhoi <span class="species-auct"><small>C. Seger, Sulzbacher &amp; Cortez</small></span></h4>
+              <p>Stropharia coelhoi is a mushroom species from the Araucaria Moist Forests of Southern Brazil, a...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/1000310" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/511917">
+                    <div class="ratio" style="background-image:url('/assets/uploads/e58c5-s.-venusta.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Stropharia venusta © Silva P.S.&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Stropharia venusta <span class="species-auct"><small>P.S. Silva, Cortez &amp; R.M. Silveira</small></span></h4>
+              <p>Stropharia venusta is a mushroom species from the Araucaria Moist Forests of Southern Brazil, a...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/511917" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/820117">
+                    <div class="ratio" style="background-image:url('/assets/uploads/0f60c-A-brasiliensis-type--3-.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">VU C1;C2aii&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Trametopsis brasiliensis (holotype).  ©️ Mauro C. Westphalen&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Trametopsis brasiliensis <span class="species-auct"><small>(Ryvarden &amp; de Meijer) Gómez-Mont. &amp; Robledo</small></span></h4>
+              <p>This is a rare species, known only from 2 collections found in Paraná State, Brazil, over 20 y...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/820117" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/1000274">
+                    <div class="ratio" style="background-image:url('/assets/uploads/cab85-Trichaptum-fissile----Thiago-Kossmann--FLOR67488-.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A3ce+4ce&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Trichaptum fissile © Thiago Kossmann (FLOR67488)&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Trichaptum fissile <span class="species-auct"><small>Kossmann &amp; Drechsler-Santos</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/1000274" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/183615">
+                    <div class="ratio" style="background-image:url('/assets/uploads/668f5-Stord_Hovaneset_Trichoglossum_walteri_6973.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A2c+3c+4c&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Trichoglossum walteri. Norway: Stord, 29.09.2013. Photo: John Bjarne Jordal&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Trichoglossum walteri <span class="species-auct"><small>(Berk.) E.J. Durand</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/183615" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/193656">
+                    <div class="ratio" style="background-image:url('/assets/uploads/69099-Tricholoma-acerbumBD-TEB-805-13.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A2c+3c+4c&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tricholoma acerbum TEB 805-13. Photo: Balint Dima.&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tricholoma acerbum <span class="species-auct"><small>(Bull.) Vent.</small></span></h4>
+              <p>
+    ...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/193656" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/257064">
+                    <div class="ratio" style="background-image:url('/assets/uploads/c79e7-Tricholoma-apium-TEB-172-14.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A2d+3d+4d&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tricholoma apium. Norway, TEB 172-14.Photo: Kristin H. Brandrud.&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tricholoma apium <span class="species-auct"><small>Jul. Schäff.</small></span></h4>
+              <p>
+    ...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/257064" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/357102">
+                    <div class="ratio" style="background-image:url('/assets/uploads/cd39e-Tricholoma-borgsjoeensis-TEB-247-11.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A2c+3c+4c&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tricholoma borgsjoeënse. TEB 247-11. Photo: Kristin H. Brandrud&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tricholoma borgsjoeënse <span class="species-auct"><small>Jacobsson &amp; Muskos</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/357102" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/307044">
+                    <div class="ratio" style="background-image:url('/assets/uploads/48244-DSC_4669_resize.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">A2c+3c+4c&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tricholoma matsutake. Russia. Western Siberia. Photo: Elena Zvyagina&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tricholoma matsutake <span class="species-auct"><small>(S. Ito &amp; S. Imai) Singer</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/307044" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/307073">
+                    <div class="ratio" style="background-image:url('/assets/uploads/f37bc-TU117208.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-preliminary-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">C1&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tricholomopsis sulphureoides, photo Irja Saar&nbsp;</small></p>
+            
+                <span class="label label-preliminary-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Preliminary Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tricholomopsis sulphureoides <span class="species-auct"><small>(Peck) Singer</small></span></h4>
+              <p>Tricholomopsis sulphureoides is a wood-decomposing fungus growing on Picea and Abies trunks in ...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/307073" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/340464">
+                    <div class="ratio" style="background-image:url('/assets/uploads/42990-venez_03.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">D2&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tripospora venezuelensis. Photo: D.W. Minter&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tripospora venezuelensis <span class="species-auct"><small>E. Müll.</small></span></h4>
+              <p>This fungus seems to be an exceptionally rare obligate symbiont of Retrophyllum rospigliosi (it...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/340464" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/1000263">
+                    <div class="ratio" style="background-image:url('/assets/uploads/75e7a-Tropicoporus-drechsleri.----C.A.-Salvador-Montoya--CTES570143-.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tropicoporus drechsleri. © C.A. Salvador-Montoya (CTES570143)&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tropicoporus drechsleri <span class="species-auct"><small>Salvador-Montoya &amp; Popoff</small></span></h4>
+              <p>Tropicoporus drechsleri is a parasitic, host specific polypore fungus that is found growing exc...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/1000263" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/538392">
+                    <div class="ratio" style="background-image:url('/assets/uploads/b8804-T.-regimontanum-1.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">B2ab(ii,iii); D2&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Tuber regimontanum Guevara, Bonito &amp; Rdz. Author Picture G.Guevara, Holotype ITCV 909&nbsp;</small></p>
+            
+                <span class="label label-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tuber regimontanum <span class="species-auct"><small>Guevara, Bonito &amp; J. Rodr.</small></span></h4>
+              <p></p><p class="text-error"><i class="icon-warning-sign"></i> This is a valuable black truffle intensively searched for 10 years since its description. It Is...</p><p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/538392" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/354924">
+                    <div class="ratio" style="background-image:url('/assets/img/image_missing.png')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">C1&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tylopilus subniger <span class="species-auct"><small>Singer, J. García &amp; L.D. Gómez</small></span></h4>
+              <p></p><p class="text-error"><i class="icon-warning-sign"></i> Tylopilus subniger is a conspicuous and rare netropical bolete. Its rarity is not a result of u...</p><p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/354924" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/325198">
+                    <div class="ratio" style="background-image:url('/assets/uploads/958a9-DSC_1617.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-preliminary-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">A2c+C1&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Oligoporus amarus basidiocarps
+    photo by Noah Siegel&nbsp;</small></p>
+            
+                <span class="label label-preliminary-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Preliminary Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Tyromyces amarus <span class="species-auct"><small>(Hedgc.) J. Lowe</small></span></h4>
+              <p></p><p class="text-error"><i class="icon-warning-sign"></i>  I suggest A2c+C1
+    
+    ...</p><p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/325198" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/427890">
+                    <div class="ratio" style="background-image:url('/assets/uploads/95228-Umbilicaria-phaea-var.-coccinea-2_CA_2009_McMullin.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Umbilicaria phaea var. coccinea. © Troy McMullin&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Umbilicaria phaea var. coccinea <span class="species-auct"><small>Llano</small></span></h4>
+              <p></p><p class="text-error"><i class="icon-warning-sign"></i> Add Eric Peterson and Steve Sheehy as assessors
+    ...</p><p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/427890" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/1000253">
+                    <div class="ratio" style="background-image:url('/assets/img/image_missing.png')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">D1&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Uncobasidium roseocremeum <span class="species-auct"><small>Gorjón, Gresl. &amp; Rajchenb.</small></span></h4>
+              <p>Uncobasidium roseocremeum is a rare corticioid fungi living on bark of Saxegothaea conspicua on...</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/1000253" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/265741">
+                    <div class="ratio" style="background-image:url('/assets/uploads/03428-Urocystis-galanthi-on-Galanthus-nivalis--Van.-Ust.-624.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-preliminary-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">C2a(i)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-preliminary-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Preliminary Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Urocystis galanthi <span class="species-auct"><small>H. Pape</small></span></h4>
+              <p></p><p class="text-error"><i class="icon-warning-sign"></i> Preliminary red-list assessment: VU C2a(i) (Vulnerable)...</p><p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/265741" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/307495">
+                    <div class="ratio" style="background-image:url('/assets/uploads/62a74-Urocystis-novae-zelandiae--New-Zealand--Isotype--H.U.V.-14-763-.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-preliminary-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">D1&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-preliminary-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Preliminary Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Urocystis novae-zelandiae <span class="species-auct"><small>(G. Cunn.) G. Cunn.</small></span></h4>
+              <p></p><p class="text-error"><i class="icon-warning-sign"></i> Preliminary red-list assessment: VU D1 (Vulnerable)...</p><p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/307495" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3 first-in-row">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/325522">
+                    <div class="ratio" style="background-image:url('/assets/uploads/a5524-Volvariella_caesiotincta_BM-1316--1-.JPG')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(248,148,6,0.7);"><h4>VU</h4></div>				
+                    <span class="label label-preliminary-assessed" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(248,148,6,0.7);">C2(a)(i)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-preliminary-assessed" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Preliminary Assessed</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Volvariella caesiotincta <span class="species-auct"><small>P.D. Orton</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/325522" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/443729">
+                    <div class="ratio" style="background-image:url('/assets/uploads/f034e-Wrightoporia-porilacerata.-------Drechsler-Santos--MAR951-14--2.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(ii)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Wrightoporia porilacerata. Fresh material. ©️ Drechsler-Santos (MAR951-14)&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Wrightoporia porilacerata <span class="species-auct"><small>Log.-Leite, A.L. Gerber &amp; Ryvarden</small></span></h4>
+              <p>Wrightoporia porilacerata is a beautiful and rare polypore species, collected only three times....</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/443729" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/541867">
+                    <div class="ratio" style="background-image:url('/assets/uploads/26195-Xanthoparmelia-beccae-St-Helena-005.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">B2ab(iii,iv,v)&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Xanthoparmelia beccae <span class="species-auct"><small>Aptroot</small></span></h4>
+              <p>This species grows only on gravelly places on the mid-elevations of the mountains on St Helena....</p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/541867" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li>
+    
+        <li class="span3">
+          <div class="thumbnail" style="position:relative;border:0;cursor:pointer;" data-href="/iucn/species_view/415337">
+                    <div class="ratio" style="background-image:url('/assets/uploads/ecb19-Xeromphalina-junipericola.jpg')">
+                      <p style="position:absolute;bottom:0;right:0;margin-bottom:0;color:#eee;"><small>© Copyright</small>&nbsp;</p>
+    
+                    <div class="etikett" style="color:#fff;background-color:rgba(204,0,0,0.5);"><h4>VU</h4></div>				
+                    <span class="label label-published" style="position:absolute;top:-5px;left:37px;height:16px;padding-top:11px;width:100%;color:#fff;background-color:rgba(204,0,0,0.5);">C2a(i); D1&nbsp;</span>
+                  <p class="img-title" style="display:none;position:absolute;bottom:16px;right:0;left:0;padding:5px;color:#fff;width:100%;background-color:rgba(248,148,6,0.7);"><small>Xeromphalina junipericola - Mitko Karadelev&nbsp;</small></p>
+            
+                <span class="label label-published" style="position:absolute;bottom:3px;left:0;margin-bottom:0;">Published</span>
+    
+              </div>
+                         
+            <div class="caption">
+              <h4 class="vnamn">Xeromphalina junipericola <span class="species-auct"><small>G. Moreno &amp; Heykoop</small></span></h4>
+              <p></p>
+    
+    <!--
+              <p align="center">                <a href="/iucn/species_view/415337" class="btn btn-small btn-info btn-block" style="position: absolute; bottom:15px; left:0;">Go to Species Page <i class="icon-arrow-right"></i> </a> </p>
+              <p>&nbsp;</p>
+    -->          
+            </div>
+            
+          </div>
+        </li></ul>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="pagination pagination-right">
+                              <ul id="pagenav"><li><a href="javascript:void(0);" class="paging" data-page="5">Prev</a></li><li class="active"><a href="javascript:void(0);" class="paging" data-page="6">6</a></li><li class="disabled"><a href="javascript:void(0);">Next</a></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    
+            </div>
+    
+        </div>  <!-- COL END -->
+    </div> <!-- ROW END -->
+    
+    
+       <footer>
+        <small>
+        <p class="muted" style="margin-top:10px;">© The Global Fungal Red List Initiative</p>
+        </small>
+       </footer>	<script type="text/javascript">
+        //<![CDATA[ 
+        // FÖR ATT UNDVIKA IE ERRORS VID FÖREKOMST AV console.log i PLUGINS M.M.
+            var debugging = true; // or true
+            if (typeof console == "undefined" || typeof console.log == "undefined") var console = { log: function() {} };
+            else if (!debugging && typeof console != "undefined") console.log = function() {};
+        //]]> 
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+    
+    <!--    <script src="/bootstrap/js/bootstrap.min.js"></script> -->
+     
+        <script src="/assets/js/json2.js"></script>
+        <script src="/assets/js/select2/select2.js"></script>
+    
+        <script src="/assets/js/jquery.timeago.js"></script>     
+        
+    <script type="text/javascript">
+        $(document).ready(function() {
+    
+        jQuery.timeago.settings.allowFuture = true;
+    
+            var popovers = new Array(); // FOR PROFILE POPOVERS
+    
+        var iucn_groups = ['<img class="iucn_group" src="/assets/img/groups_0.png"/ title=\"Unknown IUCN Specialist group\">', 
+                            '<img class="iucn_group" src="/assets/img/groups_1.png"/ title=\"Chytrid, Zygomycete, Downy Mildew and Slime Mould Specialist Group\">', 
+                            '<img class="iucn_group" src="/assets/img/groups_2.png"/ title=\"Cup-fungi, Truffles and Allies Specialist Group\">',
+                            '<img class="iucn_group" src="/assets/img/groups_3.png"/ title=\"Lichen Specialist Group\">',
+                            '<img class="iucn_group" src="/assets/img/groups_4.png"/ title=\"Mushroom, Bracket and Puffball Specialist Group\">',
+                            '<img class="iucn_group" src="/assets/img/groups_5.png"/ title=\"Rust and Smut Specialist Group\">'
+                            ];
+                            
+        var suggested = ['No', 'Yes'];
+            
+            var $window = $(window);
+    
+            // REPLACE ALL OCCURRENCES IN STRING		
+            function replaceAll(find, replace, str) { return str.replace(new RegExp(find, 'g'), replace); }
+            
+            // REPLACE LINEBREAKS IN STRING TO BR TAG
+            function br(str, is_xhtml) {   
+                var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';    
+                return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
+            }		
+            
+            // REPLACE BR TAG IN STRING TO \n
+            function brr(str, is_xhtml) {   
+                var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';    
+                return (str + '').replace('<br>', "\n");
+            }				
+    
+            // IN NAVBAR 
+    //		$(".nav-collapse li").each(function( index ) {
+    //			  console.log( index + ": " + $(this).text() );
+        //		  $(this).html(br($(this).html()));
+    //		});
+            //$('.nav-collapse li').html(br($('.nav-collapse li').html()));
+    
+    
+            var timestamp = new Date().getTime();
+            var anOpen = []; // ARRAY WITH ALL OPEN TABLE ROWS
+    
+    
+        
+        
+    // CLASS TRUNCATE EXAMPLE
+    //$(".truncate").each(function(){
+     //   if($(this).text().length > 10){
+    //                 $(this).html($(this).text().substring(0 , 20));
+    //        }
+    //});
+    
+    
+        
+            /**
+         * Adds 0 left margin to the first thumbnail on each row that don't get it via CSS rules.
+         * Recall the function when the floating of the elements changed.
+         */
+        function fixThumbnailMargins() {
+             //var tallest = 0;
+            $('.row-fluid .thumbnails:visible').each(function () {
+                var $thumbnails = $(this).children(),
+                    previousOffsetLeft = $thumbnails.first().offset().left;
+                $thumbnails.removeClass('first-in-row');
+                $thumbnails.first().addClass('first-in-row');
+                $thumbnails.each(function () {
+                    var $thumbnail = $(this),
+                        offsetLeft = $thumbnail.offset().left;
+                    if (offsetLeft < previousOffsetLeft) {
+                        $thumbnail.addClass('first-in-row');
+                    }
+                    previousOffsetLeft = offsetLeft;
+                    //var thisHeight = $thumbnail.height();
+                    //if(thisHeight > tallest) { tallest = thisHeight; }
+                });
+            //console.log(tallest);
+            //$('.thumbnail').each(function() { $(this).height(tallest); });
+            });
+        }
+        
+        //*/
+        // Execute on load
+        loadGrid(); 
+        reloadtime();    
+        //fixThumbnailMargins();
+        
+        // Bind event listener
+        $(window).resize(fixThumbnailMargins);
+    
+        // FIX THUMBNAILS MARGINS AND ALIGNMENT AFTER TAB CONTENT IS SHOWN...
+    //	$('#tab-species-list a[data-toggle="tab"], #tab-species-list-event-group a[data-toggle="tab"]').on('shown', function () {
+    //	$('a[data-toggle="tab"]').on('shown', function () {
+    //  	fixThumbnailMargins();
+    //  });
+    
+            
+            /////////////// ENABLE LINK TO TABS AND UPDATE OF HASH IN URL / ADDRESS BAR		
+            // Javascript to enable link to tab
+            var url = document.location.toString();
+            if (url.match('#')) {
+            //    $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+                $('#tab-species-list a[href="#' + url.split('#')[1] + '"]').tab('show');	
+            } 
+    
+            // http://stackoverflow.com/a/3659116/1363190		
+            // PREVENT SCROLL TO HASH ANCHOR WHEN NAVIGATING TABS		
+    //		if(location.hash) {
+    //		  setTimeout(function() {
+    //			window.scrollTo(0, 0);
+    //		  }, 1);
+    //		}
+            
+    
+                    ///////////////////////////////////////
+                    /// PROFILE POPOVERS
+                    $('body').on('click', '.close-popover', (function(e) {
+                        destroyPopovers();
+                    }));			
+    
+    
+                    function reloadtime(){
+                        jQuery("time.timeago").timeago(); // CALL TO GET THE JOB DONE IN TIME!
+                    }
+    
+                    // LISTENS TO *[data-poload] SELECTORS WITHIN CLASSES .popai TO BE ABLE TO SHOW POPOVERS DYNAMICALLY 
+                    // data-poload TAG CONTAINS A URL THAT SHOULD RETURN HTML CONTENT!
+                
+                    function destroyPopovers(){
+                        // DESTROY PREVIOUS POPOVERS
+                        if(popovers.length){
+                            for (i in popovers) {
+                                popovers[i].popover("hide");
+                                popovers[i].popover("destroy");
+                            }
+                        }		
+                    }
+                        
+    
+                //$('.thumbnail').on('click', function() {
+                $(document).on("click", ".thumbnail" , function() {                
+                    window.location.href = $(this).data('href');
+                });
+            
+            
+                    $('body').on('click', '*[data-poload]', function(event) {
+                            event.preventDefault();
+                            destroyPopovers();			
+                            var e=$(this);
+                            var title = e.data('title');
+                            var id = e.attr('id');
+                                popovers.push(e);
+                                var url = e.data('poload') + new Date().getTime(); // URL TO PREVENT CACHE
+                                
+                                $.ajax( {
+                                    url: url,
+                                    type: "GET",
+                                    cache: false,
+                                    success: function(obj) {
+                                        e.popover({content: obj,  
+                                                    placement : 'bottom',
+                                                    html : true,
+                                                    title : title +'<i class="icon-remove pull-right close-popover" style="cursor: pointer;"></i>',
+                                                    trigger: 'manual',
+                                                    animate: false,
+                                                    container: 'body',
+                                                    delay: { show: 500, hide: 100 }
+                                                    }).popover('toggle');
+                                    }
+                                }).done(reloadtime);
+                });
+                // END PROFILE POPOVERS ... 
+    
+            
+            
+            
+    /* NEW ADDED 2022 !!! */
+            
+                    /* EVENT WHENEVER A CHECKBOX FILTER IN SIDEBAR IS CHANGED... */
+                    $('#checklist-filter-event input:checkbox').change(function() {
+                        
+                        // FirSt... DISABLE FURTHER CLICKS UNTIL LOADED!
+                        $('#checklist-filter-event input:checkbox').prop("disabled", true).parent().addClass("muted");
+                        
+                        // CHECK IF CHECKBOX IS CHECKED OR NOT
+                        if($(this).prop('checked')){
+                            addFilterLabel(this.id, $(this).data('label'), 'box');
+                        } else {
+                            removeFilterLabel(this.id);
+                        }
+                        
+                        // LOAD THE GRID WITH THE NEW FILtER AND SHOW/HIDE THE EVENT INFO
+                        // GET JSON....
+                        
+                        // RESET TO PAGE 1 WHEN FILTER CHANGES
+                        $('#currentpage').text("1");// SET THE REQUESTED PAGE AS THE CURRENT ONE BEFORE loadGrid();
+                        loadGrid();
+                    });
+            
+                    // REMOVE ONE CHECKBOX FIltER  
+                    $(document).on("click", "a.remove-filter" , function() {
+    
+                        $(this).remove();
+                        if ($('a.remove-filter').length === 0) { $('.reset-filter, .filter-label').removeClass('show').addClass('hide'); }               
+    
+                        // RESET CHECKBOXES
+                        var uncheck = $(this).data('checkboxparent');
+                        $('#'+uncheck).prop("checked", false);  
+    
+                        // LOAD GRID
+                        // RESET TO PAGE 1 WHEN FILTER CHANGES
+                        $('#currentpage').text("1");// SET THE REQUESTED PAGE AS THE CURRENT ONE BEFORE loadGrid();
+                        loadGrid();
+    
+                    });
+            
+                    // REMOVE ALL CHECKBOX FILTERS (TODO: AND SELECT2 EVENTS HERE?)
+                    $(document).on("click", "a.reset-filter" , function() {
+                        resetAllFilters();
+                        loadGrid();            
+                    });
+            
+    // REMOVE ALL CHECKBOX FILTERS (TODO: AND SELECT2 EVENTS HERE?)
+    $(document).on("click", "a.paging" , function() {
+        var page = $(this).data('page');
+        $('#currentpage').text($(this).data('page'));// SET THE REQUESTED PAGE AS THE CURRENT ONE BEFORE loadGrid();
+        loadGrid();
+        //document.getElementById("thumbs_count").scrollIntoView();
+        
+        $('html, body').animate({
+            scrollTop: parseInt($("#scrolltop").offset().top)-70
+        }, 2000);
+    
+    });
+    
+    /*        
+    function scrollTo(selector) {
+        document.querySelector(selector).scrollIntoView({ behavior: 'smooth' })
+    } */       
+            
+            function addFilterLabel(id,txt,typ){
+                
+                // CHECK IF WE NEED TO ADD FILTER HEADER AND REMOVE BUTTON
+                if ($('a.remove-filter').length === 0) { $('.reset-filter, .filter-label').addClass('show').removeClass('hide'); }            
+    
+                // ADD FILTER BADGE
+    //            var lab = '<a href="javascript:void(0);" class="remove-filter" data-checkboxparent="'+id+'" data-typ="'+typ+'"><span class="badge filterlabel text-wrap">'+txt+'&nbsp;<span class="px-1 close">&times;</span></span></a>';    
+                var lab = '<a href="javascript:void(0);" class="remove-filter" data-checkboxparent="'+id+'" data-typ="'+typ+'"><span class="label filterlabel text-wrap">'+txt+'&nbsp;<i class="icon-remove"></i></span></a>';    
+    
+                
+                //$(lab).insertAfter('.filter-label');
+                $(lab).insertBefore('.reset-filter');
+            }
+            
+    
+            function removeFilterLabel(id){
+                $('a[data-checkboxparent='+id+']').remove();        
+                if ($('a.remove-filter').length === 0) { $('.reset-filter, .filter-label').removeClass('show').addClass('hide'); }            
+            }
+            
+            function resetAllFilters() {
+                resetSelectedCheckboxes();
+                resetSelectedFilterLabels();  
+            };
+            
+            function resetSelectedCheckboxes() {
+                $('#checklist-filter-event [type=checkbox]').prop("checked", false);
+                // RESET TO PAGE 1 WHEN FILTER CHANGES
+                $('#currentpage').text("1");// SET THE REQUESTED PAGE AS THE CURRENT ONE BEFORE loadGrid();
+            };           
+            
+            function resetSelectedFilterLabels() {
+                // REMOVE FILtER BADGES
+                $('.remove-filter').remove();
+                // HIDE tHE "removE ALL FIlterS" BUtton AND applied filters text
+                $('.reset-filter, .filter-label').removeClass('show').addClass('hide');
+            };                   
+            
+        
+            function loadGrid(){
+                //TELL THEM WE ARE BUSY LOADING RIGHT NOW!
+                $(".spinner-border").removeClass("hide");
+    
+                //1. GATHER EVENT AND ALL SELECTED TRAITS
+    
+                    // FETCH ALL SELECTED CHECKBOXES
+                    // https://stackoverflow.com/a/5450194/1363190
+                    var checkbox_selected = $('#checklist-filter-event input:checkbox:checked').map(function() {
+                          //console.log(this.id);
+                          return this.id; // return this.value;
+                        }).get();
+    
+    var traits = checkbox_selected.join('-');
+                
+        
+    //2. CREATE A QUERYSTRING WITH ALL SELECTED TRAITS
+    if(traits.length === 0){ 
+        traits = '-'; 
+    //    $('#ass_pu').prop("checked", true);
+    //    addFilterLabel('ass_pu','Published','box');
+    }
+                
+    //3. SAVE SELECTED TRAITS IN FORM DATA ATTRIBUTE, FOR USE IN PAGINATION ETC...
+    //$('#checklist-filter-event').data('traits', traits);
+    
+                //4. LOAD ALL THUMBS WITH SELECTED TRAITS AND CURRENT PAGE NUMBER
+    //            loadThumbs();
+                
+                // 5. GET CURRENT PAGE  
+    //var traits = $('#checklist-filter-event').data('traits');
+                var current_page = $('#currentpage').text(); // SHOULD BE SET ALREADY ON PAGINATION CLICK EVENT AND INITAL SET TO = 1 ON FIRST PAGE LOAD
+    
+                // SET NUMBER OF THUMBS TO SHOW PER PAGE
+                var per_page = 40;
+                
+                // 6. BUILD URL TO GET THUMBS BY TRAITS AND PAGE NUMBER
+                var url = "/iucn/get_thumbs_by_traits/"+traits+"/"+current_page+"/"+per_page;
+                
+                // 7. LOAD THE THUMBS TO PLACEHOLDER
+                $("#thumbs_grid").load(url, function() {
+                    
+                    $(".spinner-border").addClass("hide"); // HIDE SPINNERS
+                    fixThumbnailMargins(); // FIX THE GRID AFTER THE THUMBS ARE LOADED
+                    
+                }); // END $("#thumbs_grid").load(url, function() {
+                
+                //8. GET AND LOAD THE TOTAL NUMBER OF SPECIES
+                var url_count = '/iucn/get_species_count_by_traits/'+traits;
+                
+                $("#thumbs_count").load(url_count, function() {
+                
+                    // TOTAL NUMBER OF SPECIES ARE NOW READY TO FETCH
+                    var number_of_thumbs = parseInt($('#thumbs_count').text());
+                    
+                    // CALCULATE TOTAL NUMBER OF PAGES
+                    var total_pages = Math.ceil(number_of_thumbs/per_page);
+                    
+                    // SET/UPDATE THE TOTAL NUMBER OF PAGES
+                    $('#totalpages').text(total_pages); 
+                    
+    
+                    // 10. CREATE PAGINATION NAVBAR BASED ON WHAT WE KNOW
+                    // MAKE SURE current_page IS A INTEGER READY FOR CALCULATIONS
+                    current_page = parseInt(current_page);
+                    
+                    // CALCULATE THE MIN AND MAX PAGINATION NUMBERS TO SHOW
+                    var next_up = Math.ceil(current_page/5)*5;
+                    var next_down = next_up-5;
+                    var pagenav = '';  // STRING TO HOLD THE NAVBAR
+                    // LOOP THROUGH MIN MAX VALUES TO CREATE THE CORRECT NAVIGATION NUMBERS
+                    for (let i = next_down+1; i <= next_up; i++) {
+                        
+                        // CURRENT PAGE SHOULD NOT BE CLICKABLE
+                        if(i==current_page){
+                            pagenav += '<li class="active"><a href="javascript:void(0);" class="paging" data-page="'+ i +'">'+ i +'</a></li>';                        
+                        } else {
+                            if(i==0){
+                                // PAGE 0 SHOULD NOT BE CLICKABLE
+                                pagenav += '<li class="disabled"><a href="javascript:void(0);">'+ i +'</a></li>';           
+                            }else {
+                                if(i > total_pages){
+                                    // PAGES ABOVE TOTAL NUMBER OF PAGES SHOULD NOt BE CLICKABLE
+                                    //pagenav += '<li class="disabled"><a href="javascript:void(0);">'+ i +'</a></li>';
+                                } else {
+                                    // NORMAL CLICKABLE 
+                                    pagenav += '<li><a href="javascript:void(0);" class="paging" data-page="'+ i +'">'+ i +'</a></li>'; 
+                                }
+                            }
+                        }    
+    
+                    }
+                    //console.log(pagenav);
+                    // CREATE PREVIOUS AND NEXT BUTTONS BASED ON CURRENT PAGE
+                    var prev = '<li><a href="javascript:void(0);" class="paging" data-page="'+ (current_page-1) +'">Prev</a></li>';
+                    var next = '<li><a href="javascript:void(0);" class="paging" data-page="'+ (current_page+1) +'">Next</a></li>';
+                    if(current_page==1){
+                        // SET PREVIOUS TO DISABLED WHEN ON PAGE ONE
+                        prev = '<li class="disabled"><a href="javascript:void(0);">Prev</a></li>';
+                    }
+                    if(current_page==total_pages){
+                        // SET NEXT TO DISABLED WHEN ON LAST PAGE
+                        next = '<li class="disabled"><a href="javascript:void(0);">Next</a></li>';
+                    }
+                    // CONCATENATE PREVIOUS, PAGES AND NEXT STRINGS
+                    pagenav = prev + pagenav + next;
+                    // LOAD THE NAVBAR
+                    $('#pagenav').html(pagenav);
+                    
+                }); // END $("#thumbs_count").load(url_count, function() 
+                
+    
+                // 11. UPDATE TRAIT OPTION NUMBERS FOR EACH TRAIT 
+                // URL TO GET CALCULATIONS BASED ON SELECTED TRAITS
+                var url_count = "/iucn/get_traits_count/"+traits;
+                $.getJSON(url_count, function( data ) {
+                  var items = [];
+                  // LOOP THROUGH EACH TRAIT OPTION    
+                  $.each( data, function( key, val ) {
+                      // UPDATE SPAN WITH CALCULATED NUMBER OF SPECIES FOR THIS OPTION
+                      $('span[data-traitcounter='+ val.option_id +']').text('('+ val.option_count +')');
+                      
+                      if(val.option_count > 0){
+                         // CHECKBOXES WITH OPTIONS LEFT IS NOT MUTED
+                         $("#"+val.option_id).prop("disabled", false).parent().removeClass("muted");
+                      } else {
+                         // CHECKBOXES WITH ZERO OPTIONS IS MUTED                      
+                         $("#"+val.option_id).prop("disabled", true).parent().addClass("muted");
+                      }
+                     
+                  });
+    
+                }); // END $.getJSON(url_count, function( data ) {
+            }
+            
+    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            function sortObject(a, b){
+              var aText = a.text.toLowerCase();
+              var bText = b.text.toLowerCase(); 
+              return ((aText < bText) ? -1 : ((aText > bText) ? 1 : 0));
+            }
+    
+    
+            // HIGHLIGHT MATCHES IN SELECT2 RESULT
+            function highlight( data, search )
+            {
+                return data.replace( new RegExp( "(" + preg_quote( search ) + ")" , 'gi' ), "<span class='species-match'>$1</span>" );
+            }
+            
+            function preg_quote( str ) {
+                // http://kevin.vanzonneveld.net
+                // +   original by: booeyOH
+                // +   improved by: Ates Goral (http://magnetiq.com)
+                // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+                // +   bugfixed by: Onno Marsman
+                // *     example 1: preg_quote("$40");
+                // *     returns 1: '\$40'
+                // *     example 2: preg_quote("*RRRING* Hello?");
+                // *     returns 2: '\*RRRING\* Hello\?'
+                // *     example 3: preg_quote("\\.+*?[^]$(){}=!<>|:");
+                // *     returns 3: '\\\.\+\*\?\[\^\]\$\(\)\{\}\=\!\<\>\|\:'
+            
+                return (str+'').replace(/([\\\.\+\*\?\[\^\]\$\(\)\{\}\=\!\<\>\|\:])/g, "\\$1");
+            }
+    
+                // FORMAT RESULT IN SELECT2  
+                function speciesFormatResult(species, container, query, escapeMarkup) {
+                    var species_name;
+                    var markup = "<div class='species-result'>";
+                    if (species.name !== undefined && species.auct !== undefined) {
+                        species_name = highlight(species.name, query.term);
+                        //console.log(query.term);			
+                        markup += "<div class='species-result-row'><span class='species-name'>"+ species_name + "</span> <span class='species-auct'>"+ species.auct +"</span></div>";
+                    }
+                    markup += "</div>"
+                    return markup;
+                }
+            
+                function speciesFormatSelection(species) {
+                    //console.log(species);
+                    return species.name +' '+species.auct;
+                }        
+        
+        
+                // SPECIES SELECTBOX
+                $('#select_species').select2({
+                        placeholder: "Search for a species...",
+                        minimumInputLength: 3,
+    //					multiple:true,
+    //					allowClear: false,
+                        ajax: {
+                            url: "/iucn/search_taxa/app_indexfungorum/has_traits/",
+                            dataType: 'json',
+                            quietMillis: 100,
+                            data: function (term, page) {
+                                return {
+                                    term: term, //search term
+                                    page_limit: 500 // page size
+                                };
+                            },
+                            results: function (data, page) {
+                                return { results: data.results };
+                            }
+    
+                        },
+                        formatResult: speciesFormatResult, // omitted for brevity, see the source of this page
+                        formatSelection: speciesFormatSelection,  // omitted for brevity, see the source of this page
+                        dropdownCssClass: "bigdrop", // apply css that makes the dropdown taller
+                        escapeMarkup: function (m) { return m; } // we do not want to escape markup since we are displaying html in results
+                    })
+                    .on('change', function(e) {
+                        // REDIRECT TO SPECIES MAIN PAGE ON CHANGE
+                        var id = $(this).select2('data').id;
+                        if(id > 0){	window.location.href = 'http://iucn.ekoo.se/iucn/species_view/'+id; }
+                        // LOAD INFO ABOUT THIS SPECIES TAXONOMY ETC...
+                    });    
+        
+        
+    
+        
+        });
+        
+        
+    
+       
+        </script>    
+      
+    <div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="cboxIE" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div id="select2-drop-mask" class="select2-drop-mask" style="display: none;"></div></body>
